@@ -1,5 +1,5 @@
 ﻿Product,€/CHF pp 2023/03,Quantity,Cost €/CHF,Source,Note
-Jonsbo N1 5-bay SATA NAS case,€215.00 ,1,€215.00 ,https://www.aliexpress.com/item/1005004380662796.html,"I paid €170 all in shipped from Amazon.de, but the availability is spotty. AliExpress reliably has them, but watch out for low sale price + absurd shipping price. As of 2023-03-12 the unit linked costs €215 shipped to Ireland, including 23%S VAT. Be careful!"
+Jonsbo N1 5-bay SATA NAS case,€215.00 ,1,€215.00 ,https://www.aliexpress.com/item/1005004380662796.html,"I paid €170 all-in shipped from Amazon.de, but their availability is spotty. AliExpress reliably has them, but watch out for low sale price + absurd shipping price. As of 2023-03-12 the unit linked costs €215 shipped to Ireland, including 23%S VAT. Be careful!"
 PicoPSU,€25.00 ,1,€25.00 ,https://www.amazon.co.uk/24Pin-Input-Output-Realan-Switch/dp/B0BHT6GKFG,"You don't need anywhere NEAR 120W. 30W would do and, 50W would be more than enough. I simply had a 120W one lying around for the last 12 years, so I used it."
 12V 3A power brick,€15.00 ,1,€15.00 ,https://www.amazon.co.uk/Adaptor-100-240V-Adapter-Monitors-Amplifier/dp/B08KDP7F8C,
 Pi CM4 8GB,€120.00 ,1,€120.00 ,Praying really hard and checking https://rpilocator.com/,"A Pi CM4 Lite 8GB would be better suited to this project, if you can find one. You'll need a MicroSD card, as well."
