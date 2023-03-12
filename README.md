@@ -7,3 +7,4 @@ I built a SATA/USB3-equipped NAS with a Raspberry Pi CM4. In here, you'll find e
 
 [Notes on kernel config and setting up SATA rootfs environment](dumbnas-setup.md)
 
+[STL files for ITX adapter, PCIe card cage, and power cabling/switch mounts]() [ NOT YET READY ]
