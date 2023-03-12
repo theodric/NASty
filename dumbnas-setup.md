@@ -12,13 +12,13 @@ I assume you already have your SATA disk connected to the CM4 via a supported PC
 
 
 ###Initial setup
-1. Download a Raspberry Pi 64-bit OS image (Lite will likely suffice unless you intend to use the graphics capability of the Pi for something)
+1. Download a Raspberry Pi 64-bit OS image (Lite will likely suffice unless you intend to use the graphics capability of the Pi for something).
 
-2. If you're using a CM4 with an eMMC, to access the eMMC from your computer and flash it with software, you will need to set the jumper [as shown in figure one](figure1.png), power it on, plug a microUSB cable from the CM4 I/O board into your computer, and run the 'rpiboot' tool to load the USB disk bootloader
+2. If you're using a CM4 with an eMMC, to access the eMMC from your computer and flash it with software, you will need to set the jumper [as shown in figure one](figure1.png), power it on, plug a microUSB cable from the CM4 I/O board into your computer, and run the 'rpiboot' tool to load the USB disk bootloader.
 
 3. The 'rpiboot' USB disk bootloader tool referenced in the above step can be downloaded and compiled from the sources available here: https://github.com/raspberrypi/usbboot. It builds fine on an M1 Mac running Big Sur 10.7.4.
 
-4. Use the Raspberry Pi imaging tool to flash the eMMC (or SD card), because it offers the ability to easily configure several basic system settings including unprivileged user at flash time. Or don't, I'm not your mom. Be difficult.
+4. Use the Raspberry Pi imaging tool to flash the image downloaded in step 1 to the SD card or eMMC, because it offers the ability to easily configure several basic system settings including unprivileged user at flash time. Or don't, I'm not your mom. Be difficult, if you want.
 
 5. If you're using a CM4 with an eMMC, power the system off and remove the jumper set in step 2. Otherwise, just insert the SD card to the I/O board's socket.
 
