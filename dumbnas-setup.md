@@ -85,7 +85,7 @@ You should not create a /boot partition on the SATA disk. The system will not bo
 2. `cd /`
 3. `sudo rsync -aAxXHv / --exclude={"/boot/*","/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"},"/sataroot"} /sataroot`
 4. `cd /sataroot`
-5. `mkdir dev proc sys tmp run mnt media boot`
+5. `mkdir dev proc sys tmp run mnt media boot emmcroot`
 
 Config file changes:
 
