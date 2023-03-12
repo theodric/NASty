@@ -83,9 +83,9 @@ You should not create a /boot partition on the SATA disk. The system will not bo
 
 1. Make a temporary mount directory named `/sataroot` and mount the ext4/xfs partition on the SATA disk there
 2. `cd /`
-3. `sudo rsync -aAxXHv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"},"/sataroot"} /sataroot`
+3. `sudo rsync -aAxXHv / --exclude={"/boot/*","/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"},"/sataroot"} /sataroot`
 4. `cd /sataroot`
-5. `mkdir dev proc sys tmp run mnt media`
+5. `mkdir dev proc sys tmp run mnt media boot`
 
 Config file changes:
 
