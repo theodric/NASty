@@ -1,0 +1,17 @@
+﻿Product,€/CHF pp 2023/03,Quantity,Cost €/CHF,Source,Note
+Jonsbo N1 5-bay SATA NAS case,€215.00 ,1,€215.00 ,https://www.aliexpress.com/item/1005004380662796.html,"I paid €170 all in shipped from Amazon.de, but the availability is spotty. AliExpress reliably has them, but watch out for low sale price + absurd shipping price. As of 2023-03-12 the unit linked costs €215 shipped to Ireland, including 23%S VAT. Be careful!"
+PicoPSU,€25.00 ,1,€25.00 ,https://www.amazon.co.uk/24Pin-Input-Output-Realan-Switch/dp/B0BHT6GKFG,"You don't need anywhere NEAR 120W. 30W would do and, 50W would be more than enough. I simply had a 120W one lying around for the last 12 years, so I used it."
+12V 3A power brick,€15.00 ,1,€15.00 ,https://www.amazon.co.uk/Adaptor-100-240V-Adapter-Monitors-Amplifier/dp/B08KDP7F8C,
+Pi CM4 8GB,€120.00 ,1,€120.00 ,Praying really hard and checking https://rpilocator.com/,"A Pi CM4 Lite 8GB would be better suited to this project, if you can find one. You'll need a MicroSD card, as well."
+CM4 I/O board,€45.00 ,1,€45.00 ,https://www.pi-shop.ch/raspberry-pi-cm4io-board,
+Pericom 2-slot PCIe switch,€12.00 ,1,€12.00 ,https://www.amazon.co.uk/gp/product/B075FT8B75/,"I used a hot knife to remove the backs of the PCIe slots so I could plug in longer cards, because that's what I had. If you buy 1x cards, you won't have to do this."
+ASM1166 6-port SATA controller,€25.00 ,1,€25.00 ,https://www.aliexpress.com/item/33016481933.html,Also available for €50 from Amazon
+USB3 controller,€55.00 ,1,€55.00 ,https://ie.farnell.com/startech/pexusb3s2ei/interface-card-4-port-usb3-0-pci/dp/3446612,"You can go much cheaper, like €10. They *all* suck, even the VL805 that the Pi4 ships with. Use only if required and expect random issues."
+,,SUBTOTAL,€512.00 ,,
+,,,,,
+Samsung QVO 8TB SATA SSD,€399.00 ,3,"€1,197.00 ",Amazon.de,md RAID5
+Samsung EVO 2TB SATA SSD,€150.00 ,2,€300.00 ,Amazon.de,md RAID0
+Crucial MX500 500GB SATA SSD,€50.00 ,1,€50.00 ,Digitec,"root disk, underprovisioned by 50% for longevity"
+,,SUBTOTAL,"€1,547.00 ",,
+,,,,,
+,,TOTAL,"€2,059.00 ",,NOTE: I have mixed CHF and € prices throughout because they are pretty close to 1:1 as of 2023-03-12.
