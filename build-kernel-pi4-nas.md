@@ -8,13 +8,14 @@ On buildhost mac ACVM vm in qemu:
 Kernel changes:
 
 General setup:
-Local version -> -v8-sata
-Preemption Model -> No Forced Preemption (Server)
+1. Local version -> -v8-sata
+2. Preemption Model -> No Forced Preemption (Server)
 
 Device drivers:
-Serial ATA and Parallel ATA drivers (libata) -> * (build in) rather than M (module)
-AHCI SATA support -> * (build in) rather than M (module)
-Marvell SATA support -> * (build in) rather than M (module)
+
+1. Serial ATA and Parallel ATA drivers (libata) -> * (build in) rather than M (module)
+2. AHCI SATA support -> * (build in) rather than M (module)
+3. Marvell SATA support -> * (build in) rather than M (module)
 
 File systems:
-XFS -> * (build in) rather than M (module)
+1. XFS -> * (build in) rather than M (module)
