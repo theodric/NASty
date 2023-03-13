@@ -1,9 +1,9 @@
-\#How to set up your dumb Pi CM4 NAS with an OS, rebuild and replace the kernel, and then reconfigure it to boot from the SATA disk.
+# How to set up your dumb Pi CM4 NAS with an OS, rebuild and replace the kernel, and then reconfigure it to boot from the SATA disk.
 
-####Note
+#### Note
 *A Pi CM4 Lite would be better suited to this project, but mine uses a Pi CM4 with an eMMC because it's literally 2023 and you either buy whatever you can get your hands on or else you'll have nothing at all.*
 
-###Preface
+### Preface
 
 I will assume you know how to build a kernel, or can follow the Raspberry Pi Foundation's instructions successfully, and are comfortable with setting up disk partitions from the command line. If not, it's best if you don't attempt this, because day-to-day maintenance of the system will assume a comparable level of capability.
 
@@ -11,7 +11,7 @@ I assume you already have your SATA disk connected to the CM4 via a supported PC
 
 
 
-###Initial setup
+### Initial setup
 1. Download a Raspberry Pi 64-bit OS image (Lite will likely suffice unless you intend to use the graphics capability of the Pi for something).
 
 2. If you're using a CM4 with an eMMC, to access the eMMC from your computer and flash it with software, you will need to set the jumper [as shown in figure one](figure1.png), power it on, plug a microUSB cable from the CM4 I/O board into your computer, and run the 'rpiboot' tool to load the USB disk bootloader.
@@ -26,7 +26,7 @@ I assume you already have your SATA disk connected to the CM4 via a supported PC
 
 7. Boot the system and log in - preferably over SSH.
 
-###Building a kernel
+### Building a kernel
 
 We will need to build a kernel that has in-built support for the SATA card (and optionally for XFS, if you choose to use XFS for your root filesystem).
 
