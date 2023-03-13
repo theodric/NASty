@@ -8,7 +8,7 @@ On buildhost mac ACVM vm in qemu:
 Kernel changes:
 
 General setup:
-* Local version -> -v8-sata
+* Local version -> -v8+-sata
 * Preemption Model -> No Forced Preemption (Server)
 
 Device drivers:
