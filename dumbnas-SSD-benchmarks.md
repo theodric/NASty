@@ -10,7 +10,7 @@
 * Arch Linux
 * kernel `6.1.8-arch1-1 PREEMPT_DYNAMIC x86_64`
 
-#### Raspberry Pi NAS
+#### Raspberry Pi NAS - tested configuration
 * Jonsbo N1 5-bay SATA NAS case
 * 120W max PicoPSU
 * 12V 3A power brick
