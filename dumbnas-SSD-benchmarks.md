@@ -4,8 +4,11 @@
 
 ## Equipment for testing:
 #### Client: ThinkPad X230
-custom Core i7-3615QE 2.3GHz quad-core CPU, 16GB RAM, Crucial MX500 1TB SATA SSD
-Arch Linux, kernel `6.1.8-arch1-1 PREEMPT_DYNAMIC x86_64`
+* custom Core i7-3615QE 2.3GHz quad-core CPU
+* 16GB RAM
+* Crucial MX500 1TB SATA SSD
+* Arch Linux
+* kernel `6.1.8-arch1-1 PREEMPT_DYNAMIC x86_64`
 
 #### Raspberry Pi NAS
 * Jonsbo N1 5-bay SATA NAS case
