@@ -30,7 +30,7 @@ I assume you already have your SATA disk connected to the CM4 via a supported PC
 
 We will need to build a kernel that has in-built support for the SATA card (and optionally for XFS, if you choose to use XFS for your root filesystem).
 
-You will probably find it preferable to build (and likely cross-compile) the kernel on another, more performant system. For example, I build my kernel in an 8-core/8GB RAM Debian VM running inside the free 'ACVM' hypervisor manager on my M1 MacBook Air. A full build there requires about 9 minutes, but would likely take 2 hours or more on the Pi4. If you have no better option, or are just an incredibly obstinate person, you can build on the Pi itself.
+You will probably find it preferable to build (and likely cross-compile) the kernel on another, more performant system. For example, I build my kernel in an 8-core/8GB RAM Debian VM running inside the free 'ACVM' hypervisor manager on my M1 MacBook Air. A full build there requires about 9 minutes, but would required 95 minutes on the Pi4. If you have no better option, or are just an incredibly obstinate person, you can build on the Pi itself.
 
 Review the steps at https://www.raspberrypi.com/documentation/computers/linux_kernel.html paying special attention to the subtle differences between 32-bit and 64-bit kernel builds.
 Install the required packages to configure and build the kernel on your buildhost.
