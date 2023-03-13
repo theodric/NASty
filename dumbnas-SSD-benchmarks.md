@@ -23,11 +23,17 @@
 * 1x Crucial MX500 500GB SATA SSD
 
 ``root@nas2:~# lspci``
+
 ``00:00.0 PCI bridge: Broadcom Inc. and subsidiaries BCM2711 PCIe Bridge (rev 20)``
+
 ``01:00.0 PCI bridge: Pericom Semiconductor PI7C9X2G304 EL/SL PCIe2 3-Port/4-Lane Packet Switch (rev 05)``
+
 ``02:01.0 PCI bridge: Pericom Semiconductor PI7C9X2G304 EL/SL PCIe2 3-Port/4-Lane Packet Switch (rev 05)``
+
 ``02:02.0 PCI bridge: Pericom Semiconductor PI7C9X2G304 EL/SL PCIe2 3-Port/4-Lane Packet Switch (rev 05)``
+
 ``03:00.0 SATA controller: ASMedia Technology Inc. ASM1166 Serial ATA Controller (rev 02)``
+
 ``04:00.0 USB controller: Fresco Logic FL1100 USB 3.0 Host Controller (rev 10)``
 
 Debian Testing aarch64 - Raspberry Pi OS "Lite" 64-bit - 2023-Feb-07 updates
