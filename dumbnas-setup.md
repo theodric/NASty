@@ -62,7 +62,7 @@ Within the kernel config tool, I make the following tweaks to adjust the kernel 
 
 If you like, you can [download my premade config file from this repo](config-5.15.92-v8+-sata). Import it in the kernel configurator, or simply move it to the build directory and rename it to '.config', then carry on with the remaining build steps.
 
-###Testing the new kernel:
+### Testing the new kernel:
 
 Assuming you followed my advice and specified a different filename for the new kernel, once you have built and installed the kernel, change to the /boot partition and make a backup of the stock config.txt to config.stock, then modify the config.txt by adding an additional stanza specifying the new kernel's filename:
 
@@ -72,14 +72,14 @@ Assuming you followed my advice and specified a different filename for the new k
 
 If it all goes to hell, you can plug the SD card into your computer (or rpiboot the eMMC again to access it) and restore the config.stock to config.txt, then boot the stock kernel again.
 
-###SATA device setup:
+### SATA device setup:
 
 Given that you already confirmed at the outset that your SATA device is working, we can move on to getting it set up for use as our new root filesystem device, and then cloning the SD/eMMC rootfs to it.
 
 Prepare your SATA disk. It will require at least one partition formatted in either ext4 (standard) or XFS (if you're special, and built the module into the new kernel), which will be the new /, and optionally a second to serve as a swap partition.
 You should not create a /boot partition on the SATA disk. The system will not boot from SATA, it will boot from either the SD card or eMMC, then mount the / partition on SATA. This is a limitation of the Pi4's firmware.
 
-###Filesystem cloning:
+### Filesystem cloning:
 
 1. Make a temporary mount directory named `/sataroot` and mount the ext4/xfs partition on the SATA disk there
 2. `cd /`
@@ -97,7 +97,7 @@ We need to adjust two additional parameters to permit booting from the SATA disk
 
 2. change `/boot/cmdline.txt` to use the partUUID of the new root filesystem on SATA
 
-###Final test:
+### Final test:
 
 Once you're confident that you've populated the correct values in the files, issue a 'reboot' and watch the system come up on its new SATA rootfs!
 
