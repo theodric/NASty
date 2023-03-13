@@ -1,13 +1,13 @@
-#dumbnas
+# dumbnas
 
-##Goal: build a power-efficient, silent, moderately performant, medium-capacity, semi-affordable NAS
+## Goal: build a power-efficient, silent, moderately performant, medium-capacity, semi-affordable NAS
 
-##Equipment for testing:
-###Client: ThinkPad X230
+## Equipment for testing:
+#### Client: ThinkPad X230
 custom Core i7-3615QE 2.3GHz quad-core CPU, 16GB RAM, Crucial MX500 1TB SATA SSD
 Arch Linux, kernel `6.1.8-arch1-1 PREEMPT_DYNAMIC x86_64`
 
-####Raspberry Pi NAS
+#### Raspberry Pi NAS
 * Jonsbo N1 5-bay SATA NAS case
 * 120W max PicoPSU
 * 12V 3A power brick
@@ -38,7 +38,7 @@ Network: direct wired connection between Pi CM4 I/O board Ethernet and ThinkPad 
 
 --
 
-###Methodology:
+### Methodology:
 
 All server-side configs are the Debian defaults.
 
@@ -65,15 +65,15 @@ IOPS performance was determined using fio:
 
 --
 
-###Benchmarks:
+### Benchmarks:
 
-####Power consumption:
+#### Power consumption:
 
 * Idle power consumption with 5 SSDs is 17W
 * Power consumption during 4-disk writes is 24W
 * Power consumption during 5-disk writes with CPU at 100% using 'stress-ng' is 26W
 
-####Local:
+#### Local:
 
 Read & Write - 32GB file @ 16MB chunk
 
@@ -96,7 +96,7 @@ Read & Write - 32GB file @ 16MB chunk
 > 32GB write: 381MB/sec
 
 
-####IOPS
+#### IOPS
 
 1x Crucial MX500 500GB (underprovisioned to 256GB) [control]
 
@@ -116,7 +116,7 @@ Read & Write - 32GB file @ 16MB chunk
 > 
 > write=28MB/sec @ 7330 IOPS
 
-####NFS performance:
+#### NFS performance:
 
 (Speeds reported are as observed on the client, with the Pi CM4 as the server.)
 
@@ -142,9 +142,7 @@ Write to 4x QVO in RAID0 over NFS uses 100% of 1 CPU core, and 25-50% of a furth
 
 Read from 4x QVO in RAID0 over NFS uses 50% of 1 CPU core
 
---
-
-Observations:
+## Observations:
 
 0. Power consumption at 17W idle is low for a NAS, but I had hoped it would be lower.
 At current Irish power rates of €0.39/kWh, this setup will cost €58.08 per year to idle, or €88.83 to fully load. 
