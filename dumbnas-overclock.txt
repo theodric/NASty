@@ -22,7 +22,7 @@ arm_freq=2000
 # The gpu_freq command will set core_freq, h264_freq, isp_freq, v3d_freq and hevc_freq all together
 # which drives the L2 cache and memory bus for higher performance.
 # A value of 750 is the highest value we’ve gotten after rigorous testing.
-## js note: I only saw a 1.2% memory bench improvement at 750, so rolled back the overclock
+## implementation note: I only saw a 1.2% memory bench improvement at 750, so rolled back the overclock - but apparently this will improve PCIe performance as well, so I'll try it again later and check I/O performance.
 
 #gpu_freq=750
 
