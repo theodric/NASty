@@ -1,0 +1,41 @@
+- 12W idle
+- 200W base clock (boots slowly as a result)
+- 2GHz peak clock
+- no manual overvolt
+- no force turbo - retains warranty!
+- Dickson Industries CM1 heatsink
+
+config.txt:
+[pi4]
+# Run as fast as firmware / board allows
+arm_boost=1
+
+#see also https://qengineering.eu/overclocking-the-raspberry-pi-4.html
+#uncomment to overclock the arm. 700 MHz is the default. 2000 is safe on a pi4 with decent cooling.
+## "Clocked at 200 MHz, your RPi consumes about 1.7 Watts."
+arm_freq_min=200
+## Seems to be quite stable at 2000 (2GHz) with the Dickson Industries CM1 heatsink
+arm_freq=2000
+## apparently not needed in the new firmware(?)
+#over_voltage=5
+
+# The gpu_freq command will set core_freq, h264_freq, isp_freq, v3d_freq and hevc_freq all together
+# which drives the L2 cache and memory bus for higher performance.
+# A value of 750 is the highest value we’ve gotten after rigorous testing.
+## js note: I only saw a 1.2% memory bench improvement at 750, so rolled back the overclock
+
+#gpu_freq=750
+
+/etc/rc.local:
+cpufreq-set -g conservative
+#cpufreq-set -g ondemand
+echo 2300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+exit 0
+
+/etc/crontab:
+* *	* * *	root	echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+* *	* * *	root	echo 2300000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+* *	* * *	root	cpufreq-set -g conservative
+#* *	* * *	root	cpufreq-set -g ondemand
+
