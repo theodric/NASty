@@ -6,8 +6,8 @@ brctl addbr br0
 brctl addif br0 eth0
 
 :: When creating VMs in virt-manager, if you find that starting the VM just dumps you at a UEFI shell, do this:
-(note that this has behavior changed since the version of virt-manager/qemu-kvm that was included in Raspberry Pi OS-Debian 11!
-)
+(note that this has behavior changed since the version of virt-manager/qemu-kvm that was included in Raspberry Pi OS-Debian 11!)
+
 1. Choose option to customize the VM before starting
 2. In 'Overview', with Machine Type set to 'virt', change Firmware from 'UEFI' to 'UEFI aarch64: /usr/share/AAVMF/AAVMF_CODE.fd'
 
@@ -18,4 +18,8 @@ Within <os>, add two stanzas (modifying where appropriate to correspond to your 
 
     <loader readonly="yes" type="pflash">/usr/share/AAVMF/AAVMF_CODE.fd</loader>
     <nvram>/var/lib/libvirt/qemu/nvram/yourvmnamegoeshere_VARS.fd</nvram>
+
+:: VM networking
+Be sure to set the VM's network config to 'bridged' and enter 'br0' (or the name of whatever bridge you configured above)
+
 
