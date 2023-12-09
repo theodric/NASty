@@ -9,7 +9,8 @@ brctl addif br0 eth0
 (note that this has behavior changed since the version of virt-manager/qemu-kvm that was included in Raspberry Pi OS-Debian 11!)
 
 1. Choose option to customize the VM before starting
-2. In 'Overview', with Machine Type set to 'virt', change Firmware from 'UEFI' to 'UEFI aarch64: /usr/share/AAVMF/AAVMF_CODE.fd'
+2. In 'Overview', with Machine Type set to 'virt', change Firmware from 'UEFI' to 'UEFI aarch64: /usr/share/AAVMF/AAVMF_CODE.fd', 
+3. THEN CLICK APPLY BEFORE YOU CHANGE TO ANOTHER PANE, or else it won't apply!
 
 If you miss making these steps, then enable XML editing and commit the following changes in the VM config file:
 
@@ -19,9 +20,11 @@ Within <os>, add two stanzas (modifying where appropriate to correspond to your 
     <loader readonly="yes" type="pflash">/usr/share/AAVMF/AAVMF_CODE.fd</loader>
     <nvram>/var/lib/libvirt/qemu/nvram/yourvmnamegoeshere_VARS.fd</nvram>
 
+
 :: VM networking
 Be sure to set the VM's network config to 'bridged' and enter 'br0' (or the name of whatever bridge you configured above)
 
 :: VM installation
 You'll have to enable the virtual CD as a boot device or it will just try to boot from the (blank) hard drive image
 
+When ready, click the 'Begin Installation' button and it should come up into the OS installer
