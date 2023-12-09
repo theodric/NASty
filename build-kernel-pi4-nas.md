@@ -1,6 +1,12 @@
 The Raspberry Pi kernel build process is documented here:
 https://www.raspberrypi.com/documentation/computers/linux_kernel.html
 
+IMPORTANT NOTE:
+The Pericom PCIe switch used in this build causes instability in an unpatched kernel! 
+The GitHub issue tracking the changes is available here: https://github.com/raspberrypi/linux/issues/5352
+
+I have merged the necessary changes (which were targeted at a 6.1-series kernel) into 5.15.92; the modified files are available in this repo.
+
 
 On buildhost mac ACVM vm in qemu: 
 ``GRUB_CMDLINE_LINUX_DEFAULT="nosplash text biosdevname=0 net.ifnames=0 console=tty0 console=ttyAMA0,115200 earlyprintk=ttyAMA0,115200 consoleblank=0 systemd.show_status=true"``
