@@ -11,7 +11,7 @@ Differential BOM:
 | M.2 to PCIe    | Chinesium Special | $17  | https://www.aliexpress.com/item/1005002663297639.html                    |
 
 Notes:
-1. See NASty-setup-qemu-kvm.txt for content specific to later versions of virt-manager/qemu-kvm/Debian
+1. See [NASty-setup-qemu-kvm.txt](NASty-setup-qemu-kvm.txt) for content specific to later versions of virt-manager/qemu-kvm/Debian
 2. The SD controller is *way* better - still plan to boot from an SSD, however
 3. The system pisses and moans if not connected to a 5v5A power supply. Purchased, but still to be tested, a device that accepts 12VDC input (as from a picoPSU) and claims to output 5v5A: https://www.aliexpress.com/item/1005003967784373.html
 
