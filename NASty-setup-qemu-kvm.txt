@@ -1,7 +1,19 @@
-apt -yf install bridge-utils virt-manager libvirt0 qemu-system
+apt -yf install bridge-utils virt-manager libvirt0 qemu-system ovmf
 sudo virsh net-start default
 sudo virsh net-autostart default
 
 brctl addbr br0
 brctl addif br0 eth0
+
+:: When creating VMs in virt-manager - note that this has changed since the version of virt-manager/qemu-kvm that was included in Raspberry Pi OS-Debian 11:
+1. Choose option to customize the VM before starting
+2. In 'Overview', with Machine Type set to 'virt', change Firmware from 'UEFI' to 'UEFI aarch64: /usr/share/AAVMF/AAVMF_CODE.fd'
+
+If you miss making these steps, then enable XML editing and commit the following changes in the VM config file:
+
+Change <os firmware="efi"> to <os>
+Within <os>, add two stanzas (modifying where appropriate to correspond to your VM's name)
+
+    <loader readonly="yes" type="pflash">/usr/share/AAVMF/AAVMF_CODE.fd</loader>
+    <nvram>/var/lib/libvirt/qemu/nvram/yourvmnamegoeshere_VARS.fd</nvram>
 
