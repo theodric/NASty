@@ -22,4 +22,6 @@ Within <os>, add two stanzas (modifying where appropriate to correspond to your 
 :: VM networking
 Be sure to set the VM's network config to 'bridged' and enter 'br0' (or the name of whatever bridge you configured above)
 
+:: VM installation
+You'll have to enable the virtual CD as a boot device or it will just try to boot from the (blank) hard drive image
 
