@@ -5,7 +5,9 @@ sudo virsh net-autostart default
 brctl addbr br0
 brctl addif br0 eth0
 
-:: When creating VMs in virt-manager - note that this has changed since the version of virt-manager/qemu-kvm that was included in Raspberry Pi OS-Debian 11:
+:: When creating VMs in virt-manager, if you find that starting the VM just dumps you at a UEFI shell, do this:
+(note that this has behavior changed since the version of virt-manager/qemu-kvm that was included in Raspberry Pi OS-Debian 11!
+)
 1. Choose option to customize the VM before starting
 2. In 'Overview', with Machine Type set to 'virt', change Firmware from 'UEFI' to 'UEFI aarch64: /usr/share/AAVMF/AAVMF_CODE.fd'
 
