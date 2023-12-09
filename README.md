@@ -7,7 +7,7 @@ NASty (v2) is maybe marginally cheaper, but not by much, and is built around a s
 
 [Overview and benchmarks of system](NASty-SSD-benchmarks.md)
 
-[Bill of materials](NASty-bill-of-materials.csv)
+[NASty v1 Bill Of Materials](NASty-bill-of-materials.csv)
 
 [Notes on kernel config and build](build-kernel-pi4-nas.md)
 
