@@ -1,0 +1,7 @@
+apt -yf install bridge-utils virt-manager libvirt0 qemu-system
+sudo virsh net-start default
+sudo virsh net-autostart default
+
+brctl addbr br0
+brctl addif br0 eth0
+
