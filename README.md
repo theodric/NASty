@@ -5,10 +5,12 @@ NASty (v2) is maybe marginally cheaper, but not by much, and is built around a s
 
 
 
-[Overview and benchmarks of system](dumbnas-SSD-benchmarks.md)
+[Overview and benchmarks of system](NASty-SSD-benchmarks.md)
 
-[Bill of materials](dumbnas-bill-of-materials.csv)
+[Bill of materials](NASty-bill-of-materials.csv)
 
-[Notes on kernel config and setting up SATA rootfs environment](dumbnas-setup.md)n
+[Notes on kernel config and build](build-kernel-pi4-nas.md)
+
+[Notes on setting up SATA rootfs environment](NASty-setup.md)
 
 [STL files for ITX adapter, PCIe card cage, and power cabling/switch mounts]() [ NOT YET READY ]
