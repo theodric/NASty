@@ -30,13 +30,13 @@ I assume you already have your SATA disk connected to the CM4 via a supported PC
 
 We will need to build a kernel that has in-built support for the SATA card (and optionally for XFS, if you choose to use XFS for your root filesystem).
 
-You will probably find it preferable to build (and likely cross-compile) the kernel on another, more performant system. For example, I build my kernel in an 8-core/8GB RAM Debian VM running inside the free 'ACVM' hypervisor manager on my M1 MacBook Air. A full build there requires about 9 minutes, but would required 95 minutes on the Pi4. If you have no better option, or are just an incredibly obstinate person, you can build on the Pi itself.
+You will probably find it preferable to build (and likely cross-compile) the kernel on another, more performant system. For example, I build my kernel in an 8-core/8GB RAM Debian VM running inside the free 'ACVM' hypervisor manager on my M1 MacBook Air. A full build there requires about 9 minutes, but would require 95 minutes on the Pi4. If you have no better option, or are just an incredibly obstinate person, you can build on the Pi itself.
 
 Review the steps at https://www.raspberrypi.com/documentation/computers/linux_kernel.html paying special attention to the subtle differences between 32-bit and 64-bit kernel builds.
 Install the required packages to configure and build the kernel on your buildhost.
 I have a strong preference for 'nconfig' over menuconfig/config. You'll need to install ncurses support libraries to use it.
 
-I diverge from the recommended workflows for installing the kernel, finding it simpler to execute the initial ``make -j`nproc` Image.gz modules dtbs`` step on the VM on my Mac as if I were building directly on the Pi, then .tar up the entire build environment, scp it over to the Pi, unpack it, and execute the remaining `make modules_install` and DBT installation steps locally. Do whatever you prefer, and don't tell me about it, because I don't need to know.
+I diverge from the recommended workflows for installing the kernel, finding it simpler to execute the initial ``make -j`nproc` Image.gz modules dtbs`` step on the VM on my Mac as if I were building directly on the Pi, then .tar up the entire build environment, scp it over to the Pi, unpack it, and execute the remaining `make modules_install` and DTB installation steps locally. Do whatever you prefer, and don't tell me about it, because I don't need to know.
 
 I highly recommend installing the new kernel using a different filename, e.g. `kernel-sata.img`, so you still have a backup kernel to fall back to in the event something goes wrong in the below steps.
 
