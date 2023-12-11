@@ -33,6 +33,7 @@ We will need to build a kernel that has in-built support for the SATA card (and 
 You will probably find it preferable to build (and likely cross-compile) the kernel on another, more performant system. For example, I build my kernel in an 8-core/8GB RAM Debian VM running inside the free 'ACVM' hypervisor manager on my M1 MacBook Air. A full build there requires about 9 minutes, but would require 95 minutes on the Pi4. If you have no better option, or are just an incredibly obstinate person, you can build on the Pi itself.
 
 Review the steps at https://www.raspberrypi.com/documentation/computers/linux_kernel.html paying special attention to the subtle differences between 32-bit and 64-bit kernel builds.
+*NOTE*: Since first writing, Raspberry Pi Foundation silently changed the location of the location to copy the DTB files from `/boot/overlays` to `/boot/firmware/overlays` in their documentation. If you are using the 5.15.92 kernel, you should follow the old instructions, which are accessible with the Wayback Machine: https://web.archive.org/web/20230218160641/https://www.raspberrypi.com/documentation/computers/linux_kernel.html
 Install the required packages to configure and build the kernel on your buildhost.
 I have a strong preference for 'nconfig' over menuconfig/config. You'll need to install ncurses support libraries to use it.
 
