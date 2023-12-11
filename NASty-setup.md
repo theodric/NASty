@@ -5,7 +5,7 @@
 
 ### Preface
 
-I will assume you know how to build a kernel, or can follow the Raspberry Pi Foundation's instructions successfully, and are comfortable with setting up disk partitions from the command line. If not, it's best if you don't attempt this, because day-to-day maintenance of the system will assume a comparable level of capability.
+I will assume you know how to build a kernel, or can follow the Raspberry Pi Foundation's instructions successfully, and are comfortable with setting up disk partitions from the command line. If not, it's best if you don't attempt this, because day-to-day maintenance of the system will require a comparable level of capability.
 
 I assume you already have your SATA disk connected to the CM4 via a supported PCIe SATA controller, and have confirmed that it works out of the box after the system boots. If not, do that first: as of Q4 2022, all supported SATA controllers work out of the box-- just not as root devices at boot time. None of the below will have any effect if your device isn't supported or functional.
 
