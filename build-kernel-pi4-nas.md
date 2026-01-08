@@ -1,5 +1,10 @@
-The Raspberry Pi kernel build process is documented here:
+The Raspberry Pi kernel build process which pertains to `bullseye`-era (Debian 11) /boot layout, corresponding to 5.15.92+, is documented here:
+https://web.archive.org/web/20211201095755/https://www.raspberrypi.com/documentation/computers/linux_kernel.html
+
+Current documentation for `bookworm` (Debian 12) onward lives here:
 https://www.raspberrypi.com/documentation/computers/linux_kernel.html
+
+5.15.92+ runs fine with the new /boot/firmware layout and `trixie` (Debian 14) as of 2026-01-08
 
 IMPORTANT NOTE:
 The Pericom PCIe switch used in this build causes instability in an unpatched kernel! 
